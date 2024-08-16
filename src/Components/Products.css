@@ -1,0 +1,63 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    flex-wrap: wrap;
+}
+.background{
+    background-color:rgb(232, 233, 245);
+    background-size:cover;
+    min-height:100vh;
+}
+label{
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+input{
+    margin:10px;
+    border:1px solid black;
+    padding:10px;
+    border-radius:5px;
+}
+span{
+    color:red;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    display: block;
+    background-color: blue;
+    border-width: 0px;
+    color:white;
+    padding:10px 20px 10px 20px;
+    border-radius:10px;
+}
+.box{
+    background-color: white;
+    border:1px solid black;
+    box-sizing: border-box;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width:400px;
+}
+
+ul{
+    list-style-type: none;
+}
+h4{
+    color:black;
+    font-weight: bold;
+}
