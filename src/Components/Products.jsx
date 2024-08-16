@@ -3,7 +3,6 @@ import './Products.css';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState('');
   const [company, setCompany] = useState('AMZ');
   const [category, setCategory] = useState('Laptop');
   const [minPrice, setMinPrice] = useState('10');
@@ -15,9 +14,7 @@ const Products = () => {
 
   function getProducts() {
     let api = `http://20.244.56.144/test/companies/${company}/categories/${category}/products?top=10&minPrice=${minPrice}&maxPrice=${maxPrice}`;
-    if (search) {
-      api += `&productName=${search}`;
-    }
+   
     const headers = {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzIzNzk0NDg5LCJpYXQiOjE3MjM3OTQxODksImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjI2NGExMTMzLTdiZTMtNGE3OS1iYTEwLTg5ZTI3YjE2ZWE4MiIsInN1YiI6InNhdHRpcmFtYXNhdHlhbmFyYXlhbmFyZWRkeTdAZ21haWwuY29tIn0sImNvbXBhbnlOYW1lIjoiU0FTSSBJTlNUSVRVVEUgT0YgVEVDSE5PTE9HWSBBTkQgRU5HSU5FRVJJTkciLCJjbGllbnRJRCI6IjI2NGExMTMzLTdiZTMtNGE3OS1iYTEwLTg5ZTI3YjE2ZWE4MiIsImNsaWVudFNlY3JldCI6InFZZ3BBZ0lDekdEV2R0TU4iLCJvd25lck5hbWUiOiJTQVRUSSBSQU1BIFNBVFlBIE5BUkFZQU5BIFJFRERZIiwib3duZXJFbWFpbCI6InNhdHRpcmFtYXNhdHlhbmFyYXlhbmFyZWRkeTdAZ21haWwuY29tIiwicm9sbE5vIjoiMjFLNjFBMDVFOCJ9.u8KGjCBOBe8BCs-jgxD7Sjch-0iGCe-epTQdgf7RNJg',
       'Content-Type': 'application/json',
